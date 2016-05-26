@@ -1,9 +1,9 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-
-import java.until.scanner;
+ * and open the template in the editor.*/
+package stha ;
+import java.util.Scanner;
 public class Stha {
 
     /**
@@ -11,40 +11,51 @@ public class Stha {
      */
     public static void main(String[] args) {
         // TODO code ap System.out.println("Enter two no.");
- +        Scanner input=new Scanner(System.in);
-     int x=input.nextInt();
-        int y=input.nextInt();
-        System.out.println("Choose no. to perform calc");
-        System.out.println("1.ADD");
-         System.out.println("2.SUBTRACT");
- +        System.out.println("3.MULTIPLY");
- +        System.out.println("4.DIVIDE");
- +        System.out.println("Enter your choice");
- +        int choice=input.nextInt();
- +        switch(choice){
- +            case 1:
- +                System.out.println("Sum="+(x+y));
- +                break;
- +            case 2:
- +                System.out.println("Sub="+(x-y));
- +                break;
- +            case 3:
- +                System.out.println("Mul="+(x*y));
- +                break;
- +            case 4:
- +                System.out.println("Div="+(x/y));
- +                break;
- +            default:
- +                System.out.println("Not in option");
- +                              
- +        }
- +            
- +        
- +        
- +        
- +    }
- +    
- +}plication logic here
+         float result=0;
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter first number");
+        float x=input.nextFloat();
+        System.out.println("enter second number");
+        float y=input.nextFloat();
+        System.out.println("1.Add");
+        System.out.println("2.Subtract");
+        System.out.println("3.Multiply");
+        System.out.println("4.Divide");
+        System.out.println("Enter your choice");
+        
+        int choice=input.nextInt();
+        
+        switch(choice){
+            case 1:
+                result=x+y;
+                break;
+            case 2:
+                result=x-y;
+                break;
+            case 3:
+                result=x*y;
+                break;
+            case 4:
+                result=x/y;
+                break;
+            default:
+                System.out.println("Invalid choice");
+                break;
+                
+                      
+       
+        }
+        System.out.println("The output is "+result);
+        
+        
+        
+                
+        // TODO code application logic here
     }
     
 }
+ +     
+    
+ 
+    
+
